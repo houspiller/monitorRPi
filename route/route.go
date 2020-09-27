@@ -28,5 +28,5 @@ func ping(c *gin.Context) {
 }
 
 func getTemperatura(c *gin.Context) {
-	monitor.ExecCmd("")
+	c.String(http.StatusOK, monitor.ExecCmd())
 }
