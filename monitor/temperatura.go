@@ -7,7 +7,7 @@ import (
 )
 
 //ExecCmd TODO
-func ExecCmd() {
+func ExecCmd(param ...string) string {
 	out, err := exec.Command("vcgencmd", "measure_temp").CombinedOutput()
 	fmt.Print(string(out))
 
@@ -15,4 +15,6 @@ func ExecCmd() {
 		fmt.Print(err.Error())
 		os.Exit(1)
 	}
+
+	return string(out)
 }

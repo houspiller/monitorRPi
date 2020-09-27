@@ -1,9 +1,7 @@
 package main
 
-import (
-	"github.com/houspiller/monitorRPi/monitor"
-)
+import "github.com/houspiller/monitorRPi/route"
 
 func main() {
-	monitor.ExecCmd()
+	route.CreateRouters().Run()
 }
